@@ -14,7 +14,7 @@
   <!-- <input type="text" bind:value={nama} />
   <input type="text" bind:value={tahun} /> -->
   <Canvas>
-    <Scene {nama} {tahun} />
+    <Scene />
   </Canvas>
 </div>
 
