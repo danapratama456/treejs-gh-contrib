@@ -1,20 +1,27 @@
 <script lang="ts">
-  import App from '$lib/components/App.svelte'
+  import { Canvas } from "@threlte/core";
+  import Scene from "$lib/components/Scene.svelte";
+
+  // let nama: string;
+  // let tahun: number;
 </script>
 
-<div>
-  <App />
+<svelte:head>
+  <title>Github Contribution three js</title>
+</svelte:head>
+
+<div class="scene">
+  <!-- <input type="text" bind:value={nama} />
+  <input type="text" bind:value={tahun} /> -->
+  <Canvas>
+    <Scene {nama} {tahun} />
+  </Canvas>
 </div>
 
 <style>
-  :global(body) {
-    margin: 0;
-  }
-
-  div {
-    width: 100vw;
-    height: 100vh;
-    background: rgb(13, 19, 32);
-    background: linear-gradient(180deg, rgba(13, 19, 32, 1) 0%, rgba(8, 12, 21, 1) 100%);
+  .scene {
+    position: absolute;
+    inset: 0;
+    background-color: hsl(214, 56%, 8%);
   }
 </style>
